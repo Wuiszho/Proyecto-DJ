@@ -12,3 +12,8 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+.redondeado{
+  padding:0px 10px 10px 10px;
+  border-radius:25px;
+  color:hsl(53,95%,50%);
+}
