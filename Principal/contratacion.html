@@ -10,15 +10,20 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body>
-  <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+<body class="grey darken-4">
+  <nav class="grey darken-4" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img src="imgs/logo DJ.png"  id="logoP"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="contratacion.html">Contratación</a></li>
+        <li><a href="comprobante.html">Comprobante</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        
       </ul>
-
+      
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="contratacion.html">Contratación</a></li>
+        <li><a href="comprobante.html">Comprobante</a></li>
+        <li><a href="admin.html">Admin</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -27,31 +32,31 @@
   <div class="container">
     <div class="section">
         <br><br>
-        <a id = "botonMostrarContacto" onclick="muestraContacto()" class="waves-effect waves-light btn disabled">Contacto</a>
-        <a id = "botonMostrarEvento" onclick="muestraEvento()" class="waves-effect waves-light btn">Evento</a>
+        <a id = "botonMostrarContacto" onclick="muestraContacto()" class="waves-effect waves-light btn disabled red">Contacto</a>
+        <a id = "botonMostrarEvento" onclick="muestraEvento()" class="waves-effect waves-light btn red">Evento</a>
     </div>
   </div>
   <form>
-    <div style="display:block" class ="container" id="contenedorContacto"><!--En esta posición colocar el color representativo de la empresa-->
+    <div style="display:block" class ="container grey lighten-3 estiloMenus" id="contenedorContacto"><!--En esta posición colocar el color representativo de la empresa-->
       <h2>Contacto:</h2>
       <div class = "section">
         <div class="row">
-            <div class="input-field col l4 m6 s12"> 
-              <i class="material-icons prefix">perm_identity</i>
+            <div class="input-field col l4 m6 s12 "> 
+              <i class="material-icons prefix red-text">perm_identity</i>
               <input id="CURP" type="text" onchange="evaluaCURP()">
               <label for="CURP">CURP</label>
               <span><p id="helperCURP">Esperando...</p></span>
             </div>
             
-            <div class="input-field col l4 m6 s12">
-              <i class="material-icons prefix">local_phone</i>  
+            <div class="input-field col l4 m6 s12 ">
+              <i class="material-icons prefix red-text">local_phone</i>  
               <input id="telefono" type="tel" class="validate" maxlength="10" onchange="evalTelefono()">
               <label for="telefono">Teléfono</label>
               <span><p id="helperTelefono">Esperando...</p></span>
             </div>
             
             <div class="input-field col l4 m12 s12">
-              <i class="material-icons prefix">email</i>
+              <i class="material-icons prefix red-text">email</i>
               <input id="email" type="email" class="validate">
               <label for="email">Correo</label>
           </div>
@@ -60,8 +65,8 @@
         <div class="row">
             <div class="col l6 m6 s12">
                 <div class="row">
-                    <div class="input-field col l12">
-                        <i class="material-icons prefix">public</i>
+                    <div class="input-field col l12 ">
+                        <i class="material-icons prefix red-text">public</i>
                         <input type="text" id="autocomplete-input" class="autocomplete">
                         <label for="autocomplete-input">Estado</label>
                     </div>
@@ -70,7 +75,7 @@
           <div class="col l6 m6 s12">
             <div class="row">
               <div class="input-field col l12">
-                <i class="material-icons prefix">public</i>
+                <i class="material-icons prefix red-text">public</i>
                 <input type="text" id="delegacionesInput" class="estados">
                 <label for="delegacionesInput">Delegación</label>
               </div>
@@ -81,12 +86,12 @@
     </div>
     
     
-    <div style="display:none" class="container" id="contenedorEvento">
+    <div style="display:none" class="container grey lighten-3 estiloMenus" id="contenedorEvento">
       <h2>Evento:</h2>
       <div class="section">
         <div class="row">
           <div class="input-field col l12 m12 s12">
-            <i class="material-icons prefix">event</i>
+            <i class="material-icons prefix red-text">event</i>
             <select>
               <option value="" disabled selected>--Escoja el tipo de evento--</option>
               <option value="1">Bautizo</option>
@@ -102,13 +107,13 @@
         <div class="row">
           
           <div class="input-field col l6 m6 s12">
-            <i class="material-icons prefix">local_play</i>
+            <i class="material-icons prefix red-text">local_play</i>
             <input id="fechaEvento" type="text" class="datepicker">
             <label for="fecha">Fecha del evento:</label>
         </div>
           
           <div class="input-field col l6 m6 s12">
-            <i class="material-icons prefix">access_time</i>
+            <i class="material-icons prefix red-text">access_time</i>
             <input id = "horaEvento"type="text" class="timepicker">
             <label for= "horaEvento">Hora del evento:</label>
           </div>
@@ -117,7 +122,7 @@
       </div>
     </div>
   </form>
-  <footer class="page-footer orange">
+  <footer class="page-footer grey darken-4">
     <div class="container">
       <div class="row">
         <div class="col l12">
